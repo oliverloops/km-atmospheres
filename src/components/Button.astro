@@ -1,0 +1,36 @@
+---
+export interface Props {
+	title: string;
+    type: 'hero' | 'form';
+}
+
+const { title, type } = Astro.props;
+---
+
+<button class={type === 'form' ? 'black' : 'hero'}>
+    <p>{title}</p>
+</button>
+
+<style>
+    .hero {
+        position: absolute;
+        width: 260px;
+        height: 59px;
+        background: rgba(255, 255, 255, 0.4);
+        border: 2px solid #FFFFFF;
+        border-radius: 50px;
+        font-size: 18;
+    }
+    .black {
+        position: absolute;
+        width: 350px;
+        height: 57px;
+        background: #000000;
+        border-radius: 7px;
+    }
+    .hero > p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #fff;
+    }
+</style>
