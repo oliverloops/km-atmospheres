@@ -1,10 +1,13 @@
 ---
+// Layout
+import Footer from '../layouts/Footer.astro';
+// UI Components
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import Carousel from '../components/Carousel.astro';
 ---
 
-<Layout title="km atmospheres">
+<Layout title="KM Atmospheres | Inicio">
 	<main>
 		<div id="hero" class="hero">
 			<div class="content">
@@ -92,7 +95,7 @@ import Carousel from '../components/Carousel.astro';
 					<textarea maxlength="240" placeholder="Escribe aquí tu mensaje..."></textarea>
 					<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 5%;">
 						<Button title="Enviar" type={"form"} />
-						<small style="font-size: 11px; text-align: center; margin-top: 16px">
+						<small style="font-size: 11.5px; text-align: center; margin-top: 16px">
 							O puedes escribirnos a: 
 							<span style="text-decoration: underline;">km.atmospheres@gmail.com</span>
 						</small>
@@ -110,10 +113,7 @@ import Carousel from '../components/Carousel.astro';
 			/>
 		</div>
 	</div>
-
-	<footer id="footer">
-		<small>Here's the footer</small>
-	</footer>
+	<Footer />
 </Layout>
 
 <style>
@@ -206,7 +206,7 @@ import Carousel from '../components/Carousel.astro';
 	.contact {
 		display: grid;
 		grid-template-columns: 50% 50%;
-		margin: 5% 0 5% 2.5%;
+		margin: 5% 0 0 2.5%;
 	}
 	.form-content {
 		display: flex;
@@ -225,9 +225,6 @@ import Carousel from '../components/Carousel.astro';
 		filter: brightness(0.8);
 		object-fit: cover;
 		background-size: cover;
-		background-attachment: fixed;
-  		background-position: center;
-  		background-repeat: no-repeat;
 	}
 	input, textarea {
 		background-color: transparent;
@@ -238,6 +235,12 @@ import Carousel from '../components/Carousel.astro';
 		padding: 15px 0 15px 0;
 		margin-bottom: 10%;
 		font-size: 15px;
+	}
+	input {
+		font-family: 'Montserrat', sans-serif;
+	}
+	::placeholder {
+		color: #909090;
 	}
 	textarea {
 		font-family: 'Montserrat', sans-serif;
