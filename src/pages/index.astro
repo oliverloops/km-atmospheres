@@ -31,13 +31,13 @@ import Carousel from '../components/Carousel.astro';
 		<div class="about-content">
 			<span style="display: flex; flex-direction: row; align-items: center;">
 				<div class="about-div"></div>
-				<p style="font-size: 16">NOSOTROS</p>
+				<p class="about-title">NOSOTROS</p>
 			</span>
 			<div>
 				<h2>CADA ESTRUCTURA <br /> CUENTA UNA HISTORIA</h2>
 				<span>
 					<h4>Harmonía</h4>
-					<p style="font-size: 18px; line-height: 1.65rem;">
+					<p class="about-desc">
 						Buscamos la armonía perfecta entre el entorno natural y
 						la intervención humana, fusionando elementos orgánicos y 
 						estructurales en una sinfonía visual que respeta y realza 
@@ -46,7 +46,7 @@ import Carousel from '../components/Carousel.astro';
 				</span>
 				<span>
 					<h4>Elegancia</h4>
-					<p style="font-size: 18px; line-height: 1.65rem;">
+					<p class="about-desc">
 						La elegancia se manifiesta en cada línea y curva, en la perfecta 
 						armonía entre la forma y la función, creando espacios que cautivan 
 						con su refinamiento y sofisticación.
@@ -54,7 +54,7 @@ import Carousel from '../components/Carousel.astro';
 				</span>
 				<span>
 					<h4>Visión</h4>
-					<p style="font-size: 18px; line-height: 1.65rem;">
+					<p class="about-desc">
 						Nos inspiramos en las posibilidades infinitas del diseño para crear 
 						espacios transformadores. Nuestro enfoque visionario nos impulsa a 
 						trascender lo ordinario y crear con inspiración.
@@ -66,13 +66,13 @@ import Carousel from '../components/Carousel.astro';
 
 	<div id="trabajo" style="margin: 5% 0 5% 0">
 		<div style="margin: 0 2.5% 0 2.5%">
-			<p style="font-size: 16">NUESTRO TRABAJO</p>
+			<p class="about-title">NUESTRO TRABAJO</p>
 			<div style="width: 100%; height: 2px; background-color: #000"></div>
 		</div>
 		<Carousel />
 		<div class="quote">
 			<div class="divider" style="width: 20%; background-color: #000"></div>
-			<h3 style="color: #000; font-size: 25px; font-weight: 500">
+			<h3 class="quote-text">
 				“Uniendo estética y funcionalidad para crear espacios que 
 				<br /> deleitan los sentidos y mejoran la calidad de vida”
 			</h3>
@@ -83,7 +83,7 @@ import Carousel from '../components/Carousel.astro';
 		<div>
 			<span style="display: flex; flex-direction: row; align-items: center;">
 				<div class="about-div"></div>
-				<p style="font-size: 16">CONTACTÁNOS</p>
+				<p class="about-title">CONTACTÁNOS</p>
 			</span>
 			<div class="form-content">
 				<p style="font-size: 27px; font-weight: 800">
@@ -125,25 +125,27 @@ import Carousel from '../components/Carousel.astro';
 		width: 100%;
 	}
 	h1 {
-		font-size: 4rem;
+		font-size: 4.25rem;
 		font-family: 'Playfair-Bold', sans-serif;
 		margin: 0;
 		text-align: center;
 		color: #fff;
 	}
 	h2 {
-		font-size: 45px;
-		font-weight: 800;
+		font-size: 3rem;
+		font-family: 'Playfair-Bold', sans-serif;
 		margin-bottom: 2.5rem;
 	}
 	.subtitle {
 		color: #fff;
 		text-align: center;
+		font-size: 1.2rem;
+		letter-spacing: 1px;
 		font-family: 'PPTelegraf-Regular', serif;
 	}
 	h4 {
 		font-size: 22px;
-		font-weight: 600;
+		font-family: 'PPTelegraf-UltraBold', serif;
 	}
 	.hero {
 		justify-content: center;
@@ -177,6 +179,17 @@ import Carousel from '../components/Carousel.astro';
 		grid-template-columns: 45% 55%;
 		align-items: center;
 	}
+	.about-title {
+		font-size: 16px;
+		letter-spacing: 0.35px;
+		font-family: 'PPTelegraf-Regular', serif;
+	}
+	.about-desc {
+		font-size: 18px; 
+		line-height: 1.65rem;
+		font-weight: 200;
+		font-family: 'Poppins-Light', sans-serif;
+	}
 	.img-container {
 		width: 550px;
 		height: 750px;
@@ -205,12 +218,19 @@ import Carousel from '../components/Carousel.astro';
 		flex-direction: column; 
 		justify-content: center; 
 		align-items: center;
-		margin-top: 5%;
+		margin: 2.5% 5% 2.5% 5%;
+	}
+	.quote-text {
+		color: #000; 
+		font-size: 28px;
+		letter-spacing: 0.35px;
+		text-align: center;
+		font-family: 'Playfair-Bold', sans-serif;;
 	}
 	.contact {
 		display: grid;
 		grid-template-columns: 50% 50%;
-		margin: 5% 0 0 2.5%;
+		margin: 10% 0 0 2.5%;
 	}
 	.form-content {
 		display: flex;
