@@ -1,36 +1,43 @@
 ---
 export interface Props {
 	title: string;
-    type: 'hero' | 'form';
+    type?: 'hero' | 'form';
 }
 
 const { title, type } = Astro.props;
 ---
 
 <button class={type === 'form' ? 'black' : 'hero'}>
-    <p>{title}</p>
+    {title}
 </button>
 
 <style>
     .hero {
-        position: absolute;
-        width: 260px;
-        height: 59px;
+        width: 220px;
+        height: 50px;
         background: rgba(255, 255, 255, 0.4);
         border: 2px solid #FFFFFF;
         border-radius: 50px;
         font-size: 18;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        color: #fff;
+    }
+    :hover{
+        background: rgba(255, 255, 255, 0.6);
     }
     .black {
-        position: absolute;
         width: 350px;
         height: 57px;
         background: #000000;
         border-radius: 7px;
-    }
-    .hero > p {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
-        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>

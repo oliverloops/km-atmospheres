@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
+import Carousel from '../components/Carousel.astro';
 ---
 
 <Layout title="km atmospheres">
 	<main>
-		<div class="hero">
+		<div id="hero" class="hero">
 			<div class="content">
 				<h1>Reimaginando Espacios,<br /> Inspirando Mentes</h1>
 				<div class="divider"></div>
@@ -13,13 +14,57 @@ import Button from '../components/Button.astro';
 					Bienvenido a un mundo donde la arquitectura cobra <br />
 					vida y la imaginación se convierte en realidad 
 				</h3>
-				<Button title="Más sobre nosotros" type="hero" />
+				<Button title="Más sobre nosotros" />
 			</div>
 		</div>
 	</main>
 
-	<div>
-		<h2>Cada Esctructura <br /> Cuenta una historia</h2>
+	<div id="nosotros" class="about">
+		<div class="img-container">
+			<img class="indoor" src="../../public/images/indoor.jpg" />
+		</div>
+		<div class="about-content">
+			<span style="display: flex; flex-direction: row; align-items: center;">
+				<div class="about-div"></div>
+				<p style="font-size: 16">NOSOTROS</p>
+			</span>
+			<div>
+				<h2>CADA ESTRUCTURA <br /> CUENTA UNA HISTORIA</h2>
+				<span>
+					<h4>Harmonía</h4>
+					<p style="font-size: 18px; line-height: 1.65rem;">
+						Buscamos la armonía perfecta entre el entorno natural y
+						la intervención humana, fusionando elementos orgánicos y 
+						estructurales en una sinfonía visual que respeta y realza 
+						la belleza del paisaje.
+					</p>
+				</span>
+				<span>
+					<h4>Elegancia</h4>
+					<p style="font-size: 18px; line-height: 1.65rem;">
+						La elegancia se manifiesta en cada línea y curva, en la perfecta 
+						armonía entre la forma y la función, creando espacios que cautivan 
+						con su refinamiento y sofisticación.
+					</p>
+				</span>
+				<span>
+					<h4>Visión</h4>
+					<p style="font-size: 18px; line-height: 1.65rem;">
+						Nos inspiramos en las posibilidades infinitas del diseño para crear 
+						espacios transformadores. Nuestro enfoque visionario nos impulsa a 
+						trascender lo ordinario y crear con inspiración.
+					</p>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="trabajo" style="margin: 5% 2.5% 0 2.5%">
+		<div>
+			<p style="font-size: 16">NUESTRO TRABAJO</p>
+			<div style="width: 100%; height: 2px; background-color: #000"></div>
+		</div>
+		<Carousel image={"../../public/images/gallery/001.jpg"} />
 	</div>
 </Layout>
 
@@ -34,10 +79,19 @@ import Button from '../components/Button.astro';
 		text-align: center;
 		color: #fff;
 	}
+	h2 {
+		font-size: 45px;
+		font-weight: 800;
+		margin-bottom: 2.5rem;
+	}
 	h3 {
 		color: #fff;
 		text-align: center;
 		font-weight: 400;
+	}
+	h4 {
+		font-size: 22px;
+		font-weight: 600;
 	}
 	.hero {
 		justify-content: center;
@@ -51,12 +105,12 @@ import Button from '../components/Button.astro';
   		background-position: center;
   		background-repeat: no-repeat;
 	}
-	.hero > .content {
+	.content {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 100vh;
+		height: 200vh;
 	}
 	.divider {
 		height: 2px;
@@ -65,5 +119,33 @@ import Button from '../components/Button.astro';
 		justify-content: center;
 		align-items: center;
 		background-color: #fff;
+	}
+	.about {
+		display: grid;
+		grid-template-columns: 45% 55%;
+		align-items: center;
+	}
+	.img-container {
+		width: 550px;
+		height: 750px;
+		margin: 80px 50px 80px 50px;
+	}
+	.indoor {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.about-content {
+		height: 90vh;
+		display: flex;
+		flex-direction: column;
+		margin: 80px 5% 80px 0;
+		padding-right: 25%;
+	}
+	.about-div {
+		height: 2px; 
+		width: 60px;
+		background-color: #000;
+		margin-right: 12px;
 	}
 </style>
