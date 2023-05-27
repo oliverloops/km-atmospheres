@@ -1,13 +1,31 @@
----
-export interface Props {
-	image: string;
-}
 
-const { image } = Astro.props;
----
 
-<div class="container">
-    <img src={image} />
+<div class="glide container">
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/001.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/002.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/003.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/004.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/005.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/006.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/007.jpg'} />
+            </li>
+        </ul>
+    </div>
 </div>
 
 <style>
@@ -15,7 +33,22 @@ const { image } = Astro.props;
         width: 270px;
         height: 390px;
     }
+
     .container {
-        margin: 10px;
+        margin-top: 2%;
     }
 </style>
+
+<script>
+    import Glide from '@glidejs/glide'
+
+    new Glide('.glide', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 5,
+        autoplay: 2000,
+        hoverpause: true,
+        animationDuration: 800,
+        animationTimingFunc: 'ease-in-out',
+    }).mount()
+</script>

@@ -64,7 +64,16 @@ import Carousel from '../components/Carousel.astro';
 			<p style="font-size: 16">NUESTRO TRABAJO</p>
 			<div style="width: 100%; height: 2px; background-color: #000"></div>
 		</div>
-		<Carousel image={"../../public/images/gallery/001.jpg"} />
+		<Carousel />
+		<Carousel />
+		<Carousel />
+		<div class="quote">
+			<div class="divider" style="width: 20%; background-color: #000"></div>
+			<h3 style="color: #000; font-size: 25px; font-weight: 500">
+				“Uniendo estética y funcionalidad para crear espacios que 
+				<br /> deleitan los sentidos y mejoran la calidad de vida”
+			</h3>
+		</div>
 	</div>
 </Layout>
 
@@ -147,5 +156,12 @@ import Carousel from '../components/Carousel.astro';
 		width: 60px;
 		background-color: #000;
 		margin-right: 12px;
+	}
+	.quote {
+		display: flex; 
+		flex-direction: column; 
+		justify-content: center; 
+		align-items: center;
+		margin-top: 5%;
 	}
 </style>
