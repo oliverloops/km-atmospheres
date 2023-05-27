@@ -86,9 +86,9 @@ import Carousel from '../components/Carousel.astro';
 				<p class="about-title">CONTACTÁNOS</p>
 			</span>
 			<div class="form-content">
-				<p style="font-size: 27px; font-weight: 800">
+				<p class="form-title">
 					¡Trabajemos juntos! <br />
-					<span style="font-size: 17px; font-weight: 300;">Lleva tus ideas a la realidad</span>
+					<span class="form-subtitle">Lleva tus ideas a la realidad</span>
 				</p>
 				<form>
 					<input type="text" placeholder="Nombre" />
@@ -96,8 +96,8 @@ import Carousel from '../components/Carousel.astro';
 					<input type="number" placeholder="Teléfono (opcional)" />
 					<textarea maxlength="240" placeholder="Escribe aquí tu mensaje..."></textarea>
 					<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 5%;">
-						<Button title="Enviar" type={"form"} />
-						<small style="font-size: 11.5px; text-align: center; margin-top: 16px">
+						<Button title="ENVIAR" type={"form"} />
+						<small class="btn-sub">
 							O puedes escribirnos a: 
 							<span style="text-decoration: underline; cursor: pointer;">
 								km.atmospheres@gmail.com
@@ -249,6 +249,20 @@ import Carousel from '../components/Carousel.astro';
 		filter: brightness(0.8);
 		object-fit: cover;
 		background-size: cover;
+	}
+	.form-title {
+		font-size: 27px;
+		font-family: 'PPTelegraf-UltraBold', serif;
+	}
+	.form-subtitle {
+		font-size: 17px;
+		font-family: 'PPTelegraf-Regular', serif;
+	}
+	.btn-sub {
+		font-size: 12px; 
+		text-align: center; 
+		margin-top: 16px;
+		font-family: 'PPTelegraf-Regular', serif;
 	}
 	input, textarea {
 		background-color: transparent;
