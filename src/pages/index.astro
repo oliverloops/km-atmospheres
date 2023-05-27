@@ -59,13 +59,11 @@ import Carousel from '../components/Carousel.astro';
 		</div>
 	</div>
 
-	<div id="trabajo" style="margin: 5% 2.5% 0 2.5%">
-		<div>
+	<div id="trabajo" style="margin: 5% 0 5% 0">
+		<div style="margin: 0 2.5% 0 2.5%">
 			<p style="font-size: 16">NUESTRO TRABAJO</p>
 			<div style="width: 100%; height: 2px; background-color: #000"></div>
 		</div>
-		<Carousel />
-		<Carousel />
 		<Carousel />
 		<div class="quote">
 			<div class="divider" style="width: 20%; background-color: #000"></div>
@@ -73,6 +71,32 @@ import Carousel from '../components/Carousel.astro';
 				“Uniendo estética y funcionalidad para crear espacios que 
 				<br /> deleitan los sentidos y mejoran la calidad de vida”
 			</h3>
+		</div>
+	</div>
+
+	<div id="contacto" style="margin: 5% 2.5% 5% 2.5%">
+		<div>
+			<span style="display: flex; flex-direction: row; align-items: center;">
+				<div class="about-div"></div>
+				<p style="font-size: 16">CONTACTÁNOS</p>
+			</span>
+			<span>
+				<h4 style="font-size: 27px; font-weight: 800">¡Trabajemos juntos!</h4>
+				<p style="font-size: 17px; font-weight: 300;">Lleva tus ideas a la realidad</p>
+			</span>
+			<form>
+				<input type="text" placeholder="Nombre" />
+				<input type="text" placeholder="Correo electrónico" />
+				<input type="number" placeholder="Teléfono" />
+				<textarea placeholder="Mensaje"></textarea>
+				<div style="margin-top: 5%;">
+					<Button title="Enviar" type={"form"} />
+					<small style="font-size: 11px; text-align: center; margin-top: 10px">
+						O puedes escribirnos a: 
+						<span style="text-decoration: underline;">km.atmospheres@gmail.com</span>
+					</small>
+				</div>
+			</form>
 		</div>
 	</div>
 </Layout>
@@ -163,5 +187,17 @@ import Carousel from '../components/Carousel.astro';
 		justify-content: center; 
 		align-items: center;
 		margin-top: 5%;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+	input, textarea {
+		background-color: transparent;
+		border-bottom: 1px solid #000;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		padding: 15px 0 15px 0;
 	}
 </style>

@@ -1,6 +1,6 @@
 
 
-<div class="glide container">
+<div id="carousel-1" class="container">
     <div class="glide__track" data-glide-el="track">
         <ul class="glide__slides">
             <li class="glide__slide">
@@ -28,6 +28,62 @@
     </div>
 </div>
 
+<div id="carousel-2" class="container">
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/007.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/006.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/005.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/008.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/003.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/002.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/001.jpg'} />
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="carousel-3" class="container">
+    <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/009.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/006.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/007.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/008.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/001.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/004.jpg'} />
+            </li>
+            <li class="glide__slide">
+                <img src={'../../public/images/gallery/005.jpg'} />
+            </li>
+        </ul>
+    </div>
+</div>
+
 <style>
     img {
         width: 270px;
@@ -42,12 +98,33 @@
 <script>
     import Glide from '@glidejs/glide'
 
-    new Glide('.glide', {
+    new Glide('#carousel-1', {
         type: 'carousel',
         startAt: 0,
         perView: 5,
         autoplay: 2000,
-        hoverpause: true,
+        hoverpause: false,
+        animationDuration: 800,
+        animationTimingFunc: 'ease-in-out',
+    }).mount()
+
+    new Glide('#carousel-2', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 5,
+        autoplay: 2200,
+        hoverpause: false,
+        direction: 'rtl',
+        animationDuration: 800,
+        animationTimingFunc: 'ease-in-out',
+    }).mount()
+
+    new Glide('#carousel-3', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 5,
+        autoplay: 2400,
+        hoverpause: false,
         animationDuration: 800,
         animationTimingFunc: 'ease-in-out',
     }).mount()
