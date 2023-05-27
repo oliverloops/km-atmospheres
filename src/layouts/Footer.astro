@@ -2,11 +2,18 @@
 <footer id="footer">
    <div class="container">
     <img 
-        width="140"
-        height="100"
+        width="160"
+        height="120"
         src="../../public/images/logo.png" 
     />
-    <div></div>
+    <div class="ico-container">
+        <a href="https://instagram.com">
+            <img class="icon" width="28" height="28" src="../../public/images/email_icon.png" />
+        </a>
+        <a href="mailto:km.atmospheres@gmail.com">
+            <img class="icon" width="30" height="30" src="../../public/images/instagram_icon.png" />
+        </a>
+    </div>
    </div>
    <div class="text">
     <div class="info">
@@ -36,6 +43,7 @@
     .container {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         width: 20%;
         padding: 20px 0 15px 20px;
     }
@@ -60,6 +68,22 @@
         justify-content: space-around;
     }
     small {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        font-weight: 300;
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5%;
+    }
+    .ico-container {
+        display: flex;
+        align-items: center;
+        margin-left: 10%;
+        padding: 10px 0 10px 0;
+    }
+    .icon {
+        border: 2px solid #000;
+        border-radius: 50%;
+        padding: 7px;
+        margin: 0 5px 0 5px;
     }
 </style>
