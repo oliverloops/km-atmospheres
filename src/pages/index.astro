@@ -293,6 +293,9 @@ import Carousel from '../components/Carousel.astro';
     .hero {
         background-image: url('../../public/images/gallery/007.jpg');
     }
+	.content {
+		height: 100vh;
+	}
     .title {
         font-size: 2rem;
         font-family: 'Playfair-Bold', sans-serif;
@@ -307,8 +310,20 @@ import Carousel from '../components/Carousel.astro';
         letter-spacing: 0.5px;
 		margin: 2.5% 5% 2.5% 5%;
     }
-	.content {
-		height: 100vh;
+	.about {
+		display: flex;
+		align-items: center;
+	}
+	.about-title {
+		font-size: 16px;
+		letter-spacing: 0.35px;
+		font-family: 'PPTelegraf-Regular', serif;
+	}
+	.about-desc {
+		font-size: 18px; 
+		line-height: 1.65rem;
+		font-weight: 200;
+		font-family: 'Poppins-Light', sans-serif;
 	}
 }
 
@@ -339,21 +354,6 @@ import Carousel from '../components/Carousel.astro';
         letter-spacing: 1px;
         font-family: 'PPTelegraf-Regular', serif;
     }
-	.about {
-		display: flex;
-		align-items: center;
-	}
-	.about-title {
-		font-size: 16px;
-		letter-spacing: 0.35px;
-		font-family: 'PPTelegraf-Regular', serif;
-	}
-	.about-desc {
-		font-size: 18px; 
-		line-height: 1.65rem;
-		font-weight: 200;
-		font-family: 'Poppins-Light', sans-serif;
-	}
 }
 </style>
 
