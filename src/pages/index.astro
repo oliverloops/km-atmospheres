@@ -289,62 +289,71 @@ import Carousel from '../components/Carousel.astro';
 	:focus {
 		outline: none;
 	}
-	// MEDIA QUERIES
 	@media (min-width: 280px) and (max-width: 767px) {
-    	.hero {
-        	justify-content: center;
-        	align-items: center;
-        	display: flex;
-        	height: 100vh;
-        	width: '100%';
-        	background-image: url('../../public/images/gallery/007.jpg') !important;
-        	background-size: cover;
-        	background-attachment: fixed;
-          	background-position: center;
-          	background-repeat: no-repeat;
-    	}
-    	.title {
-        	font-size: 2rem;
-        	font-family: 'Playfair-Bold', sans-serif;
-        	margin: 0;
-        	text-align: center;
-        	color: #fff;
-    	}
-    	.subtitle {
-        	color: #fff;
-        	text-align: center;
-        	font-size: 1.2rem;
-        	letter-spacing: 1px;
-        	font-family: 'PPTelegraf-Regular', serif;
-    	}	
+    .hero {
+        background-image: url('../../public/images/gallery/007.jpg');
+    }
+    .title {
+        font-size: 2rem;
+        font-family: 'Playfair-Bold', sans-serif;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+    }
+    .subtitle {
+        color: #fff;
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+		margin: 2.5% 5% 2.5% 5%;
+    }
+	.content {
+		height: 100vh;
 	}
-	@media (min-width: 768px) and (max-width: 1024px) {
-    	.hero {
-        	justify-content: center;
-        	align-items: center;
-        	display: flex;
-        	height: 100vh;
-        	width: '100%';
-        	background-image: url('../../public/images/gallery/007.jpg');
-        	background-size: cover;
-        	background-attachment: fixed;
-          	background-position: center;
-          	background-repeat: no-repeat;
-    	}
-    	.title {
-        	font-size: 2rem;
-        	font-family: 'Playfair-Bold', sans-serif;
-        	margin: 0;
-        	text-align: center;
-        	color: #fff;
-    	}
-    	.subtitle {
-        	color: #fff;
-        	text-align: center;
-        	font-size: 1.2rem;
-        	letter-spacing: 1px;
-        	font-family: 'PPTelegraf-Regular', serif;
-    	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+        width: '100%';
+        background-image: url('../../public/images/gallery/007.jpg');
+        background-size: cover;
+        background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+    }
+    .title {
+        font-size: 2rem;
+        font-family: 'Playfair-Bold', sans-serif;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+    }
+    .subtitle {
+        color: #fff;
+        text-align: center;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        font-family: 'PPTelegraf-Regular', serif;
+    }
+	.about {
+		display: flex;
+		align-items: center;
 	}
+	.about-title {
+		font-size: 16px;
+		letter-spacing: 0.35px;
+		font-family: 'PPTelegraf-Regular', serif;
+	}
+	.about-desc {
+		font-size: 18px; 
+		line-height: 1.65rem;
+		font-weight: 200;
+		font-family: 'Poppins-Light', sans-serif;
+	}
+}
 </style>
 
