@@ -43,4 +43,41 @@
     :hover {
         color: rgb(255, 255, 255, 0.7);
     }
+
+    /* Media Queries */
+    @media (min-width: 280px) and (max-width: 767px) {
+        header {
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        img {
+            width: 150px;
+            height: 100px;
+        }
+        .links {
+            width: 100%;
+            justify-content: center;
+        }
+        a {
+            font-size: 0.9rem;
+            margin: 0 5% 0 5%;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        header {
+            width: 90%;
+        }
+        img {
+            width: 200px;
+            height: 150px;
+        }
+        .links {
+            width: 20%;
+        }
+        a {
+            font-size: 18px;
+        }
+    }
 </style>
