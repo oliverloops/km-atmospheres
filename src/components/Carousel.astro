@@ -95,10 +95,21 @@
     }
 
     /* Media Queries */
-    @media (min-width: 280px) and (max-width: 767px) {
+    @media (min-width: 280px) and (max-width: 649px) {
         img {
             width: 125px;
             height: 185px;
+        }
+
+        .container {
+            margin-top: 5%;
+        }
+    }
+
+    @media (min-width: 650px) and (max-width: 1149px) {
+        img {
+            width: 200px;
+            height: 280px;
         }
 
         .container {
@@ -115,8 +126,8 @@
     new Glide('#carousel-1', {
         type: 'carousel',
         startAt: 0,
-        perView: width < 550 ? 3 : 5,
-        autoplay: 2000,
+        perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
+        autoplay: 2100,
         hoverpause: false,
         animationDuration: 800,
         animationTimingFunc: 'ease-in-out',
@@ -125,8 +136,8 @@
     new Glide('#carousel-2', {
         type: 'carousel',
         startAt: 0,
-        perView: width < 550 ? 3 : 5,
-        autoplay: 2200,
+        perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
+        autoplay: 2300,
         hoverpause: false,
         direction: 'rtl',
         animationDuration: 800,
@@ -136,8 +147,8 @@
     new Glide('#carousel-3', {
         type: 'carousel',
         startAt: 0,
-        perView: width < 767 ? 3 : 5,
-        autoplay: 2400,
+        perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
+        autoplay: 2500,
         hoverpause: false,
         animationDuration: 800,
         animationTimingFunc: 'ease-in-out',

@@ -308,7 +308,7 @@ import Carousel from '../components/Carousel.astro';
 	:focus {
 		outline: none;
 	}
-	@media (min-width: 280px) and (max-width: 767px) {
+	@media (min-width: 280px) and (max-width: 649px) {
     .hero {
         background-image: url('../../public/images/gallery/007.jpg');
     }
@@ -341,7 +341,7 @@ import Carousel from '../components/Carousel.astro';
 		background-size: contain;
 	}
 	.img-container {
-		width: 95%;
+		width: 90%;
 		height: 250px;
 		margin: 50px 2.5% 50px 2.5%;
 	}
@@ -375,6 +375,7 @@ import Carousel from '../components/Carousel.astro';
 		width: 60px;
 		background-color: #000;
 		margin-right: 12px;
+		margin-left: 2.5%;
 	}
 	.portfolio {
 		margin: 15% 0 15% 0
@@ -385,13 +386,19 @@ import Carousel from '../components/Carousel.astro';
 	.contact {
 		display: flex;
 		flex-direction: column;
-		margin: 20% 0 20% 2.5%;
+		margin: 20% 2.5% 20% 2.5%;
 	}
 	.form-content {
 		display: flex;
 		flex-direction: column;
 		width: 80%;
 		margin: 10% 10% 0 10%;
+	}
+	.form-title {
+		font-size: 23px;
+	}
+	.form-subtitle {
+		font-size: 16px;
 	}
 	.form-img {
 		display: none;
@@ -414,21 +421,21 @@ import Carousel from '../components/Carousel.astro';
 	}
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 650px) and (max-width: 1149px) {
     .hero {
         justify-content: center;
         align-items: center;
         display: flex;
         height: 100vh;
         width: '100%';
-        background-image: url('../../public/images/gallery/007.jpg');
+        background-image: url('../../public/images/hero_img.jpg');
         background-size: cover;
         background-attachment: fixed;
-          background-position: center;
-          background-repeat: no-repeat;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .title {
-        font-size: 2rem;
+        font-size: 3rem;
         font-family: 'Playfair-Bold', sans-serif;
         margin: 0;
         text-align: center;
@@ -437,10 +444,99 @@ import Carousel from '../components/Carousel.astro';
     .subtitle {
         color: #fff;
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         letter-spacing: 1px;
         font-family: 'PPTelegraf-Regular', serif;
     }
+	.about {
+		display: grid;
+		grid-template-columns: 55% 45%;
+		align-items: flex-start;
+	}
+	.about-title {
+		font-size: 14px;
+		letter-spacing: 0.35px;
+		font-family: 'PPTelegraf-Regular', serif;
+	}
+	.about-quote {
+		font-size: 2rem;
+	}
+	.about-subtitle {
+		font-size: 18px;
+	}
+	.about-desc {
+		font-size: 15px; 
+		line-height: 1.5rem;
+	}
+	.about-content {
+		margin: 80px 2.5% 0 2.5%;
+		padding-right: 5%;
+	}
+	.img-container {
+		width: 90%;
+		height: 750px;
+		margin: 80px 25px 80px 25px;
+	}
+	.indoor {
+		width: 100%;
+		height: 100vh;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url('../../public/images/indoor.jpg'); 
+	}
+	.quote-divider {
+		width: 20%;
+		margin: 2rem 0 0.5rem 0;
+	}
+	.quote-text {
+		width: 80%;
+		font-size: 20px;
+		letter-spacing: 0.1px;
+	}
+	.form-content {
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+		margin: 10% 10% 0 10%;
+	}
+	.form-title {
+		font-size: 22px;
+	}
+	.form-subtitle {
+		font-size: 15px;
+	}
+
+	.btn-sub {
+		font-size: 10px; 
+	}
+}
+@media (min-width: 1150px) and (max-width: 1399px){
+	.about {
+		grid-template-columns: 50% 50%;
+		align-items: flex-start;
+	}
+	.about-title {
+		font-size: 16px;
+	}
+	.about-quote {
+		font-size: 2.85rem;
+	}
+	.about-subtitle {
+		font-size: 22px;
+	}
+	.about-desc {
+		font-size: 18px; 
+		line-height: 1.75rem;
+	}
+	.about-content {
+		margin: 80px 2.5% 0 2.5%;
+		padding-right: 10%;
+	}
+	.img-container {
+		width: 90%;
+		height: 750px;
+		margin: 80px 25px 80px 25px;
+	}
 }
 </style>
 
