@@ -107,7 +107,7 @@ import Carousel from '../components/Carousel.astro';
 				</form>
 			</div>
 		</div>
-		<div style="height: 100vh; width: 100%">
+		<div class="form-cover">
 			<img 
 				width="100%"
 				height="100%"
@@ -265,6 +265,10 @@ import Carousel from '../components/Carousel.astro';
 		object-fit: cover;
 		background-size: cover;
 	}
+	.form-cover {
+		height: 100vh; 
+		width: 100%;
+	}
 	.form-title {
 		font-size: 27px;
 		font-family: 'PPTelegraf-UltraBold', serif;
@@ -381,7 +385,7 @@ import Carousel from '../components/Carousel.astro';
 	.contact {
 		display: flex;
 		flex-direction: column;
-		margin: 10% 0 0 2.5%;
+		margin: 20% 0 20% 2.5%;
 	}
 	.form-content {
 		display: flex;
@@ -401,6 +405,9 @@ import Carousel from '../components/Carousel.astro';
 		width: 80%;
 		font-size: 18px;
 		letter-spacing: 0.1px;
+	}
+	.form-cover {
+		display: none;
 	}
 	.btn-sub {
 		font-size: 11px; 
