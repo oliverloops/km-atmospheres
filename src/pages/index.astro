@@ -90,11 +90,14 @@ import Carousel from '../components/Carousel.astro';
 					¡Trabajemos juntos! <br />
 					<span class="form-subtitle">Lleva tus ideas a la realidad</span>
 				</p>
-				<form>
-					<input type="text" placeholder="Nombre" />
-					<input type="text" placeholder="Correo electrónico" />
-					<input type="number" placeholder="Teléfono (opcional)" />
-					<textarea maxlength="240" placeholder="Escribe aquí tu mensaje..."></textarea>
+				<form
+					action="https://formspree.io/f/mzbqqwaz"
+					method="POST"
+				>
+					<input type="text" name="name" placeholder="Nombre" />
+					<input type="email" name="email" placeholder="Correo electrónico" />
+					<input type="number" name="phone" placeholder="Teléfono (opcional)" />
+					<textarea name="message" maxlength="250" placeholder="Escribe aquí tu mensaje..."></textarea>
 					<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 5%;">
 						<Button title="ENVIAR" type={"form"} />
 						<small class="btn-sub">
@@ -208,7 +211,7 @@ import Carousel from '../components/Carousel.astro';
 		height: 100vh;
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-image: url('../../public/images/gallery/001.jpg'); 
+		background-image: url('../../public/images/indoor.jpg'); 
 	}
 	.about-content {
 		display: flex;
@@ -310,7 +313,7 @@ import Carousel from '../components/Carousel.astro';
 	}
 	@media (min-width: 280px) and (max-width: 649px) {
     .hero {
-        background-image: url('../../public/images/gallery/007.jpg');
+        background-image: url('../../public/images/hero_mobile_img.jpg');
     }
 	.content {
 		height: 100vh;
@@ -337,7 +340,7 @@ import Carousel from '../components/Carousel.astro';
 	.indoor {
 		width: 100%;
 		height: 250px;
-		background-image: url('../../public/images/hero_img.jpg'); 
+		background-image: url('../../public/images/outdoor.jpg'); 
 		background-size: contain;
 	}
 	.img-container {
@@ -482,7 +485,7 @@ import Carousel from '../components/Carousel.astro';
 		height: 100vh;
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-image: url('../../public/images/gallery/001.jpg'); 
+		background-image: url('../../public/images/indoor.jpg'); 
 	}
 	.quote-divider {
 		width: 20%;
