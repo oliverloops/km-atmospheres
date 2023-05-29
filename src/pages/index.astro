@@ -71,7 +71,7 @@ import Carousel from '../components/Carousel.astro';
 		</div>
 		<Carousel />
 		<div class="quote">
-			<div class="divider" style="width: 20%; background-color: #000"></div>
+			<div class="quote-divider"></div>
 			<h3 class="quote-text">
 				“Uniendo estética y funcionalidad para crear espacios que 
 				<br /> deleitan los sentidos y mejoran la calidad de vida”
@@ -173,6 +173,14 @@ import Carousel from '../components/Carousel.astro';
 		justify-content: center;
 		align-items: center;
 		background-color: #fff;
+	}
+	.quote-divider {
+		height: 2px;
+		width: 20%;
+		margin: 2rem 0 1rem 0;
+		justify-content: center;
+		align-items: center; 
+		background-color: #000
 	}
 	.about {
 		display: grid;
@@ -383,6 +391,19 @@ import Carousel from '../components/Carousel.astro';
 	}
 	.form-img {
 		display: none;
+	}
+	.quote-divider {
+		height: 2px;
+		width: 33.33%;
+		margin: 2rem 0 0.5rem 0;
+	}
+	.quote-text {
+		width: 80%;
+		font-size: 18px;
+		letter-spacing: 0.1px;
+	}
+	.btn-sub {
+		font-size: 11px; 
 	}
 }
 
