@@ -93,15 +93,29 @@
     .container {
         margin-top: 2%;
     }
+
+    /* Media Queries */
+    @media (min-width: 280px) and (max-width: 767px) {
+        img {
+            width: 125px;
+            height: 185px;
+        }
+
+        .container {
+            margin-top: 4%;
+        }
+    }
 </style>
 
 <script>
     import Glide from '@glidejs/glide'
 
+    const width = window.innerWidth;
+
     new Glide('#carousel-1', {
         type: 'carousel',
         startAt: 0,
-        perView: 5,
+        perView: width < 550 ? 3 : 5,
         autoplay: 2000,
         hoverpause: false,
         animationDuration: 800,
