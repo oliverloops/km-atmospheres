@@ -7,11 +7,34 @@ export interface Props {
 const { title, type } = Astro.props;
 ---
 
-<button class={type === 'form' ? 'black-btn' : 'hero-btn'}>
-    {title}
-</button>
+<>
+    {
+        type === 'form' 
+        ? (
+            <button class={'black-btn'}>
+                {title}
+            </button>
+        ) 
+        : (
+            <a href="#nosotros">
+                <button class={'hero-btn'}>
+                    {title}
+                </button>    
+            </a>
+        )
+    }
+</>
 
 <style>
+    a {
+        text-decoration: none;
+    }
+    a:focus {
+        outline: 0;
+    }
+    a:hover{
+        outline: 0;
+    }
     .hero-btn {
         width: 220px;
         height: 50px;
@@ -27,9 +50,6 @@ const { title, type } = Astro.props;
         font-size: 0.9rem;
         color: #fff;
         cursor: pointer;
-    }
-    :hover{
-        background: rgba(255, 255, 255, 0.6);
     }
     .black-btn {
         width: 100%;
