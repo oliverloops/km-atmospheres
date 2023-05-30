@@ -1,16 +1,20 @@
+---
+import { Image } from '@astrojs/image/components';
+---
 
 <footer id="footer">
    <div class="container">
-    <img 
+    <Image 
         class="logo"
-        src="../../images/logo.png" 
+        src={import("../images/logo.png" )}
+        alt="Logo"
     />
     <div class="ico-container">
         <a href="mailto:km.atmospheres@gmail.com">
-            <img class="icon" width="28" height="28" src="../../images/email_icon.png" />
+            <Image class="icon" src={import("../images/email_icon.png")} alt="email icon" />
         </a>
         <a href="https://instagram.com/km.atmospheres?igshid=NTc4MTIwNjQ2YQ==">
-            <img class="icon" width="30" height="30" src="../../images/instagram_icon.png" />
+            <Image class="icon" src={import("../images/instagram_icon.png" )} alt="instagram icon" />
         </a>
     </div>
    </div>
@@ -19,7 +23,6 @@
         <span>
             <p class="section">Contacto</p>
             <p>km.atmospheres@gmail.com</p>
-            <p>+52 477 123 456</p>
         </span>
         <span>
             <p class="section">Ubicación</p>
@@ -84,6 +87,8 @@
         padding: 10px 0 10px 0;
     }
     .icon {
+        width: 28px;
+        height: 28px;
         border: 2px solid #000;
         border-radius: 50%;
         padding: 7px;
@@ -130,6 +135,15 @@
             justify-content: center;
             margin-right: 0;
             margin-top: 15px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            padding: 5px;
+            margin: 0 5px 0 5px;
         }
     }
     @media (min-width: 650px) and (max-width: 1149px){

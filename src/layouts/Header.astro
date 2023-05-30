@@ -1,10 +1,10 @@
 ---
-// TODO: Build header comp.
+import { Image } from '@astrojs/image/components';
 ---
 
 <header id="head">
     <div style="cursor: pointer;">
-        <img src="../../images/logo_white.png" />
+        <Image src={import("../images/logo_white.png")} alt="logo" />
     </div>
     <div class="links">
         <a href="#trabajo">NUESTRO TRABAJO</a>
