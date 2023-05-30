@@ -4,7 +4,7 @@ import { Image } from '@astrojs/image/components';
 
 <header id="head">
     <div style="cursor: pointer;">
-        <Image src={import("../images/logo_white.png")} alt="logo" />
+        <Image src={import("../images/logo_white.webp")} alt="logo" />
     </div>
     <div class="links">
         <a href="#trabajo">NUESTRO TRABAJO</a>
@@ -21,6 +21,7 @@ import { Image } from '@astrojs/image/components';
         position: absolute;
         padding: 1.75% 2.5% 1.75% 2.5%;
         background-color: transparent;
+        z-index: 100;
     }
     img {
         width: 135px;
@@ -28,10 +29,10 @@ import { Image } from '@astrojs/image/components';
         object-fit: contain;
     }
     .links {
-        width: 25%;
+        width: 27%;
         padding: 20px 10px 20px 10px;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-around;
     }
     a {
         font-size: 16px;

@@ -12,16 +12,15 @@ import Carousel from '../components/Carousel.astro';
 <Layout title="KM Atmospheres | Inicio">
 	<Header />
 	<main>
-		<div id="hero" class="hero">
-			<div class="content">
-				<h1 class="title">Reimaginando Espacios,<br /> Inspirando Mentes</h1>
-				<div class="divider"></div>
-				<p class="subtitle">
-					Bienvenido a un mundo donde la arquitectura cobra <br />
-					vida y la imaginación se convierte en realidad 
-				</p>
-				<Button title="MÁS SOBRE NOSOTROS" />
-			</div>
+		<Image id="hero" class="hero" src={import('../images/hero_img.webp')} format="webp" alt="hero" />
+		<div class="content">
+			<h1 class="title">Reimaginando Espacios,<br /> Inspirando Mentes</h1>
+			<div class="divider"></div>
+			<p class="subtitle">
+				Bienvenido a un mundo donde la arquitectura cobra <br />
+				vida y la imaginación se convierte en realidad 
+			</p>
+			<Button title="MÁS SOBRE NOSOTROS" />
 		</div>
 	</main>
 
@@ -160,19 +159,24 @@ import Carousel from '../components/Carousel.astro';
 		align-items: center;
 		display: flex;
 		height: 100vh;
-		width: '100%';
-		background-image: url('../images/hero_img.webp'); 
+		width: 100%;
+		/* background-image: url('../images/hero_img.webp');  */
 		background-size: cover;
 		background-attachment: fixed;
   		background-position: center;
-  		background-repeat: no-repeat;
+		filter: brightness(0.45);
+		z-index: -1;
 	}
 	.content {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 200vh;
+		height: 100vh;
+		width: 100%;
+		z-index: 1;
+		position: absolute;
+		top: 0;
 	}
 	.divider {
 		height: 2px;
