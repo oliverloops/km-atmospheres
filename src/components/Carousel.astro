@@ -146,37 +146,42 @@ import { Image, Picture } from '@astrojs/image/components';
 
 <script>
     import Glide from '@glidejs/glide'
-
     const width = window.innerWidth;
 
-    new Glide('#carousel-1', {
-        type: 'carousel',
-        startAt: 0,
-        perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
-        autoplay: 2100,
-        hoverpause: false,
-        animationDuration: 800,
-        animationTimingFunc: 'ease-in-out',
-    }).mount()
+    window.addEventListener('load', () => {
+            new Glide('#carousel-1', {
+            type: 'carousel',
+            startAt: 0,
+            perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
+            autoplay: 2100,
+            hoverpause: false,
+            animationDuration: 800,
+            animationTimingFunc: 'ease-in-out',
+        }).mount()
+    })
 
-    new Glide('#carousel-2', {
-        type: 'carousel',
-        startAt: 0,
-        perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
-        autoplay: 2300,
-        hoverpause: false,
-        direction: 'rtl',
-        animationDuration: 800,
-        animationTimingFunc: 'ease-in-out',
-    }).mount()
+    window.addEventListener('load', () => {
+        new Glide('#carousel-2', {
+            type: 'carousel',
+            startAt: 0,
+            perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
+            autoplay: 2300,
+            hoverpause: false,
+            direction: 'rtl',
+            animationDuration: 800,
+            animationTimingFunc: 'ease-in-out',
+        }).mount()
+    })
 
-    new Glide('#carousel-3', {
-        type: 'carousel',
-        startAt: 0,
-        perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
-        autoplay: 2500,
-        hoverpause: false,
-        animationDuration: 800,
-        animationTimingFunc: 'ease-in-out',
-    }).mount()
+    window.addEventListener('load', () => {
+        new Glide('#carousel-3', {
+            type: 'carousel',
+            startAt: 0,
+            perView: width < 550 ? 3 : width > 550 && width < 1149 ? 4 : 5,
+            autoplay: 2500,
+            hoverpause: false,
+            animationDuration: 800,
+            animationTimingFunc: 'ease-in-out',
+        }).mount()
+    })
 </script>
