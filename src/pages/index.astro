@@ -161,10 +161,11 @@ import Carousel from '../components/Carousel.astro';
 		height: 100vh;
 		width: 100%;
 		/* background-image: url('../images/hero_img.webp');  */
-		background-size: cover;
+		background-size: contain;
 		background-attachment: fixed;
   		background-position: center;
 		filter: brightness(0.45);
+		object-fit: cover;
 		z-index: -1;
 	}
 	.content {
@@ -322,9 +323,6 @@ import Carousel from '../components/Carousel.astro';
 		outline: none;
 	}
 	@media (min-width: 280px) and (max-width: 649px) {
-    .hero {
-        background-image: url('../images/hero_mobile_img.webp');
-    }
 	.content {
 		height: 100vh;
 		margin-top: 15%;
@@ -350,7 +348,6 @@ import Carousel from '../components/Carousel.astro';
 	.indoor {
 		width: 100%;
 		height: 250px;
-		background-image: url('../../images/outdoor.webp'); 
 		background-size: contain;
 	}
 	.img-container {
@@ -435,18 +432,6 @@ import Carousel from '../components/Carousel.astro';
 }
 
 @media (min-width: 650px) and (max-width: 1149px) {
-    .hero {
-        justify-content: center;
-        align-items: center;
-        display: flex;
-        height: 100vh;
-        width: '100%';
-        background-image: url('../images/hero_img.webp');
-        background-size: cover;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
     .title {
         font-size: 3rem;
         font-family: 'Playfair-Bold', sans-serif;
