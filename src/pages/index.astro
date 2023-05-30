@@ -14,11 +14,12 @@ import Carousel from '../components/Carousel.astro';
 	<main>
 		<Image id="hero" class="hero" src={import('../images/hero_img.webp')} format="webp" alt="hero" />
 		<div class="content">
-			<h1 class="title">Reimaginando Espacios,<br /> Inspirando Mentes</h1>
+			<h1 class="title">Construyendo <br />Espacios en Armonía</h1>
 			<div class="divider"></div>
 			<p class="subtitle">
-				Bienvenido a un mundo donde la arquitectura cobra <br />
-				vida y la imaginación se convierte en realidad 
+				Reimaginando espacios, inspirando mentes <br />
+				bienvenido a un mundo donde la arquitectura <br />
+				cobra vida y la imaginación se convierte en realidad
 			</p>
 			<Button title="MÁS SOBRE NOSOTROS" />
 		</div>
@@ -41,7 +42,7 @@ import Carousel from '../components/Carousel.astro';
 			<div>
 				<h2 class="about-quote">CADA ESTRUCTURA <br /> CUENTA UNA HISTORIA</h2>
 				<span>
-					<h4 class="about-subtitle">Harmonía</h4>
+					<h4 class="about-subtitle">Armonía</h4>
 					<p class="about-desc">
 						Buscamos la armonía perfecta entre el entorno natural y
 						la intervención humana, fusionando elementos orgánicos y 
@@ -133,21 +134,22 @@ import Carousel from '../components/Carousel.astro';
 	}
 	.title {
 		font-size: 4.25rem;
-		font-family: 'Playfair-Bold', sans-serif;
+		font-family: 'Playfair-SemiBold';
 		margin: 0;
 		text-align: center;
 		color: #fff;
 	}
 	.about-quote {
 		font-size: 3rem;
-		font-family: 'Playfair-Bold', sans-serif;
+		font-family: 'Playfair-SemiBold';
 		margin-bottom: 2.5rem;
 	}
 	.subtitle {
 		color: #fff;
 		text-align: center;
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 		letter-spacing: 1px;
+		line-height: 27px;
 		font-family: 'PPTelegraf-Regular', serif;
 	}
 	.about-subtitle {
@@ -181,7 +183,7 @@ import Carousel from '../components/Carousel.astro';
 	}
 	.divider {
 		height: 2px;
-		width: 40%;
+		width: 33.33%;
 		margin: 2rem 0 1rem 0;
 		justify-content: center;
 		align-items: center;
@@ -337,9 +339,9 @@ import Carousel from '../components/Carousel.astro';
     .subtitle {
         color: #fff;
         text-align: center;
-        font-size: 1rem;
+        font-size: 0.9rem;
         letter-spacing: 0.5px;
-		margin: 2.5% 5% 2.5% 5%;
+		margin: 2.5% 10% 2.5% 10%;
     }
 	.about {
 		display: flex;
