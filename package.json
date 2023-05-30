@@ -10,9 +10,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/image": "^0.16.9",
     "@astrojs/vercel": "^3.4.0",
     "@glidejs/glide": "^3.6.0",
-    "astro": "^2.5.5"
+    "astro": "^2.5.5",
+    "sharp": "^0.32.1"
   },
   "devDependencies": {
     "@types/glidejs__glide": "^3.6.1"
